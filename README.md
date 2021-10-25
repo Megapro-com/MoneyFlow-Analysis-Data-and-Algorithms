@@ -1,4 +1,4 @@
-# MoneyFlow-Analysis
+# MoneyFlow Analysis Data and Algorithms
 
 This repo is for codes to analyze MA data and MA related trading algorithms and trading signals.
 
