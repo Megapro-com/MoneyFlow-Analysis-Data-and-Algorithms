@@ -90,9 +90,11 @@ def get_prices_form4(link, link_bak):
     if stock_table == None:
         form4 = get_soup(PREFIX+link_bak)
         stock_table = form4.find(text='Table I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned')
-        tmp = stock_table.parent.parent.parent.parent.parent.tbody
-        if tmp == None:
+        if stock_table == None:
             return
+    tmp = stock_table.parent.parent.parent.parent.parent.tbody
+    if tmp == None:
+        return
     rows = tmp.findAll('tr')
     nrows = len(rows) # number of rows in Table I of Form-4
     line = []
