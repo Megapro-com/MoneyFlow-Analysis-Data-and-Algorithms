@@ -86,12 +86,11 @@ def get_symbol_form4(link, link_bak):
 def get_prices_form4(link, link_bak):
     # get the trading info from form4 link
     form4 = get_soup(PREFIX+link)
-    stock_table = form4.find(text='Table I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned').parent.parent.parent.parent.parent
-    tmp = stock_table.tbody
-    if tmp == None:
+    stock_table = form4.find(text='Table I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned')
+    if stock_table == None:
         form4 = get_soup(PREFIX+link_bak)
-        stock_table = form4.find(text='Table I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned').parent.parent.parent.parent.parent
-        tmp = stock_table.tbody
+        stock_table = form4.find(text='Table I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned')
+        tmp = stock_table.parent.parent.parent.parent.parent.tbody
         if tmp == None:
             return
     rows = tmp.findAll('tr')
