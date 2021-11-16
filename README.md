@@ -6,5 +6,5 @@ Megapro’s GitHub repos are intended for informational purposes only. It is not
 (b) Megapro is exempted from any direct or indirect liability to the maximum extent of the law.  
 (c) You are aware of risks in the financial investment and are able to bear potential losses in full.  
 
-Here is a list of Money Flow data you can utilize to build your quant trading systems:
+Here is a list of Money Flow data you can utilize to build your quant trading systems:  
 https://www.cybercon.com/stock-etf-money-flow-data/
